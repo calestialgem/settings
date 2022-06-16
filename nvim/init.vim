@@ -2,17 +2,19 @@
 " S E T T I N G S
 " ------------------------------------------------------------------------------
 
-set autochdir         " Working directory as current file's directory.
-set browsedir=current " Browse in working directory.
-set cdhome            " No arguments changes directory to home.
-set colorcolumn=+1    " Highlight column 1 after the textwidth.
-set expandtab         " Spaces instead of tabs.
-set list              " Draw whitespace.
+set autochdir           " Working directory as current file's directory.
+set browsedir=current   " Browse in working directory.
+set cdhome              " No arguments changes directory to home.
+set colorcolumn=+1      " Highlight column 1 after the textwidth.
+set expandtab           " Spaces instead of tabs.
+set langmap=ğ[,ü],ö{,ç} " Turkish keyboard fix.
+set list                " Draw whitespace.
 " Rules of drawing whitespace.
 set listchars=tab:»■,trail:■,extends:⟩,precedes:⟨,nbsp:■
 " Use CTRL-A and CTRL-X on alpha and octal.
 set nrformats=alpha,octal,hex,bin
 set number            " Line numbers.
+set path+=**          " Recursive search for files.
 set relativenumber    " Line number relative to current.
 set scrolloff=8       " Leave space vertically around cursor.
 set shiftround        " Indent multiples of tab width.
