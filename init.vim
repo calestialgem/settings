@@ -7,7 +7,6 @@ set browsedir=current " Browse in working directory.
 set cdhome            " No arguments changes directory to home.
 set colorcolumn=+1    " Highlight column 1 after the textwidth.
 set expandtab         " Spaces instead of tabs.
-set fileformats=unix  " Line endings are a new line.
 set list              " Draw whitespace.
 " Rules of drawing whitespace.
 set listchars=tab:»■,trail:■,extends:⟩,precedes:⟨,nbsp:■
