@@ -1,4 +1,4 @@
--- O P T I O N S
+--  O P T I O N S
 
 vim.opt.browsedir = 'current' -- Browse in working directory.
 vim.opt.cdhome = true         -- No arguments to cd changes directory to home.
@@ -28,7 +28,7 @@ vim.opt.scrolloff = 8         -- Leave space vertically around cursor.
 vim.opt.shiftround = true     -- Indent multiples of tab width.
 vim.opt.shiftwidth = 4        -- Set the tab width.
 vim.opt.sidescrolloff = 8     -- Leave space horizontally around cursor.
-vim.opt.signcolumn = number   -- Show signs next to line numbers.
+vim.opt.signcolumn = 'number' -- Show signs next to line numbers.
 vim.opt.splitbelow = true     -- Put new windows below.
 vim.opt.splitright = true     -- Put new windows right.
 vim.opt.tabstop = 4           -- Set tab alignment length.
