@@ -15,7 +15,7 @@ packer.use({ 'morhetz/gruvbox', config = function()
     vim.env.NVIM_TUI_ENABLE_TRUE_COLOR = 1 -- Use 24-bit colors.
     vim.opt.termguicolors = true           -- Use 24-bit colors.
     vim.g.gruvbox_italic = 1               -- Use italics.
-    vim.g.gruvbox_contrast_dark = 'hard'   -- Harden contrast for dark.
+    vim.g.gruvbox_contrast_dark = 'hard'   -- Soften contrast for dark.
     vim.g.gruvbox_contrast_light = 'hard'  -- Harden contrast for light.
     -- Set the color scheme.
     vim.cmd('autocmd vimenter * ++nested colorscheme gruvbox')
@@ -24,4 +24,10 @@ end })
 -- Lightline as status line.
 packer.use({ 'itchyny/lightline.vim', config = function()
     vim.opt.showmode = false -- Do not show the mode below the status line.
+end })
+
+-- Lightline Gruvbox as status line theme.
+packer.use({ 'shinchu/lightline-gruvbox.vim', after = 'lightline.vim',
+config = function()
+    vim.g.lightline = { colorscheme = 'gruvbox' } -- Set the status line theme.
 end })
