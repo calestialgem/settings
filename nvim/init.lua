@@ -3,3 +3,6 @@
 
 require('options')
 require('plugins')
+
+-- Uncomment when changing settings.
+-- require('recompile')
