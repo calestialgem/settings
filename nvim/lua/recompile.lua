@@ -13,11 +13,30 @@ config = function()
     require('cmake')
 end })
 
--- Load Conquer of Completion by neoclide for code completion.
-packer.use({ 'neoclide/coc.nvim',
-branch = 'release',
+-- Nvim-CMP by hrsh7th for autocompletion.
+packer.use('hrsh7th/nvim-cmp')
+packer.use('hrsh7th/cmp-nvim-lsp')
+packer.use('hrsh7th/cmp-buffer')
+packer.use('hrsh7th/cmp-path')
+packer.use('hrsh7th/cmp-cmdline')
+
+-- LauSnip by L3MON4D3 and Nvim-CMP integration by saadparwaiz1 for snippets.
+packer.use('L3MON4D3/LuaSnip')
+packer.use('saadparwaiz1/cmp_luasnip')
+
+-- Load official Neovim LSP Config for common LSP configurations.
+packer.use({ 'neovim/nvim-lspconfig',
+after = {
+    'nvim-cmp',
+    'cmp-nvim-lsp',
+    'cmp-buffer',
+    'cmp-path',
+    'cmp-cmdline',
+    'LuaSnip',
+    'cmp_luasnip'
+},
 config = function()
-    require('completion')
+    require('lsp')
 end })
 
 -- Load Fugitive for git integration.
