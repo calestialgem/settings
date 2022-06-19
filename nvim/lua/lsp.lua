@@ -102,5 +102,9 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 require('lspconfig')['clangd'].setup{
         on_attach = on_attach,
-        capabilities = capabilities
+        capabilities = capabilities,
+        cmd = {
+            'clangd',
+            '--compile-commands-dir=/build/Debug'
+        }
 }

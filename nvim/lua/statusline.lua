@@ -13,8 +13,7 @@ vim.g.lightline = {
     active = {
         left = {
             { 'mode', 'paste' },
-            { 'filemod' },
-            { 'cocstatus' }
+            { 'filemod' }
         },
         right = {
             { 'totallines', 'lncnumber' },
@@ -41,12 +40,8 @@ vim.g.lightline = {
     },
     component_function = {
         gitbranch = 'FugitiveHead', -- Get branch information from fugitive.
-        cocstatus = 'coc#status'    -- Get status of Conquer of Completion.
     }
 }
 
 -- Fix relative file path.
 vim.cmd('autocmd BufWinEnter * cd .')
-
--- Update Conquer of Completion status on the status line.
-vim.cmd('au User CocStatusChange,CocDiagnosticChange call lightline#update()')
