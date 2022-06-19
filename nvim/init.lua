@@ -2,6 +2,7 @@
 -- SPDX-License-Identifier: GPL-3.0-or-later
 
 require('options')
+require('keymaps')
 require('plugins')
 
 -- Uncomment when changing settings.
