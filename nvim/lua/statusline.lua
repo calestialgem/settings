@@ -4,12 +4,9 @@
 -- Do not duplicate the mode.
 vim.opt.showmode = false
 
--- Left and right side colored.
-vim.g.lightline_gruvbox_color = 'both'
-
 -- Costimize the status line.
 vim.g.lightline = {
-    colorscheme = 'gruvbox', -- Set status line theme.
+    colorscheme = 'moons',
     active = {
         left = {
             { 'mode', 'paste' },

@@ -42,19 +42,21 @@ end })
 -- Load Fugitive for git integration.
 packer.use('tpope/vim-fugitive')
 
+-- Load Lightline Foobar by sainnhe for the status line theme.
+packer.use('sainnhe/lightline_foobar.vim')
+
 -- Load Lightline by itchyny as the status line.
 packer.use({ 'itchyny/lightline.vim',
-after = 'vim-fugitive',
+after = {
+    'vim-fugitive',
+    'lightline_foobar.vim'
+},
 config = function()
     require('statusline')
 end })
 
--- Load Gruvbox by shinchu and from oldwomanjosiah as the status line theme.
-packer.use({ 'oldwomanjosiah/lightline-gruvbox.vim',
-after = 'lightline.vim' })
-
--- Load Gruvbox by morhetz as the theme.
-packer.use({ 'morhetz/gruvbox',
+-- Load Pink Moon by sts10 as the theme.
+packer.use({ 'sts10/vim-pink-moon',
 config = function()
     require('theme')
 end })
